@@ -5,12 +5,13 @@ class Solution {
         while(i>=0 && nums[i]>=nums[i+1]){
             i--;
         }
-        //find greater number than the pivot value from right & swap it with the pivot value
+        //find greater number than the pivot value from right 
         if(i>=0){
             int j=nums.length-1;
             while(nums[j]<=nums[i]){
                 j--;
             }
+            //swap the pivot value with the larger number 
             int t=nums[i];
             nums[i]=nums[j];
             nums[j]=t;
