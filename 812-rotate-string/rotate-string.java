@@ -5,8 +5,6 @@ class Solution {
         }
         String con=s+s;
         return con.contains(goal);
-
-
         
     }
 }
