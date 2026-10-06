@@ -1,19 +1,15 @@
 class Solution {
     public int jump(int[] nums) {
-        int i = 0;
+        int prev = 0;
         int maxjump = 0;
         int step = 0;
-
-        while(maxjump < nums.length - 1) {
-            int far = maxjump;
-            for(int j = i; j <= maxjump; j++) {
-                far = Math.max(far, j + nums[j]);
+        for(int i=0;i<nums.length-1;i++){
+            maxjump=Math.max(maxjump,i+nums[i]);
+            if(i==prev){
+                step+=1;
+                prev=maxjump;
             }
-            i = maxjump + 1;
-            maxjump = far;
-            step++;
         }
-
         return step;
     }
 }
