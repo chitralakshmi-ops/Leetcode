@@ -15,4 +15,3 @@ class Solution {
         return fin<0 ? -1:start;
     }
 }
-
